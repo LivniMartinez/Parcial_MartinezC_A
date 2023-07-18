@@ -124,9 +124,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 fila += "</tr>";
                 tabla.innerHTML += fila;
             });
+            console.log("Tabla de episodios actualizada:", tabla.innerHTML);
         } else {
             let fila = "<tr><td colspan='3'>No se encontraron resultados.</td></tr>";
             tabla.innerHTML += fila;
+            console.log("Tabla de episodios actualizada:", tabla.innerHTML);
         }
     }
 

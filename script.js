@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Función para obtener episodios mediante la API
     function obtenerEpisodios(terminoBusquedaEpisodios) {
         // Construir la URL de la API con el término de búsqueda de episodios
-        let url = "https://rickandmortyapi.com/api/episode/?name=" + terminoBusquedaEpisodios;
+        let url = "https://rickandmortyapi.com/api/episode/?page=2" + terminoBusquedaEpisodios;
 
         // Realizar una solicitud GET a la URL de la API
         fetch(url)

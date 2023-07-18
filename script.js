@@ -168,12 +168,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 fila += "</tr>";
                 tabla.innerHTML += fila;
             });
+            console.log("Tabla de ubicaciones actualizada:", tabla.innerHTML);
         } else {
             let fila = "<tr><td colspan='3'>No se encontraron resultados.</td></tr>";
             tabla.innerHTML += fila;
+            console.log("Tabla de ubicaciones actualizada:", tabla.innerHTML);
         }
     }
-
     // Función para limpiar el contenido de una tabla
     function limpiarTabla(idTabla) {
         let tabla = document.getElementById(idTabla).getElementsByTagName("tbody")[0];

@@ -55,4 +55,27 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Error al obtener los personajes:", error);
           });
       }
+
+    // Función para mostrar los personajes en una tabla 
+      function mostrarPersonajes(personajes) {
+    // Obtener la tabla de personajes por su ID
+        var tabla = document.getElementById("tabla-personajes").getElementsByTagName("tbody")[0];
+        tabla.innerHTML = "";
+    // Comprobación si se encontraron personajes
+        if (personajes && personajes.length > 0) {
+          personajes.forEach(function(personaje) {
+            var fila = "<tr>";
+            fila += "<td><img src='" + personaje.image + "' alt='" + personaje.name + "'></td>";
+            fila += "<td>" + personaje.name + "</td>";
+            fila += "<td>" + personaje.species + "</td>";
+            fila += "<td>" + personaje.gender + "</td>";
+            fila += "<td>" + personaje.location.name + "</td>";
+            fila += "</tr>";
+            tabla.innerHTML += fila;
+          });
+        } else {
+          var fila = "<tr><td colspan='5'>No se encontraron resultados.</td></tr>";
+          tabla.innerHTML += fila;
+        }
+      }
 });

@@ -159,7 +159,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }
     
-
     //funcion para el boton de limpiar tabla
     function limpiarTabla(idTabla) {
         var tabla = document.getElementById(idTabla).getElementsByTagName("tbody")[0];

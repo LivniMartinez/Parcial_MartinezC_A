@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen_Parcial</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Personajes de Rick and Morty</h1>
+
+    <div class="mb-4">
+      <h3>Busqueda de Personajes</h3>
+      <!-- Busqueda por Nombres -->
+      <div class="input-group mb-3">
+        <input type="text" id="input-busqueda-personajes" class="form-control" placeholder="Buscar por nombre">
+        <button id="boton-busqueda-personajes" class="btn btn-primary">Buscar</button>
+        <button id="boton-limpiar-personajes" class="btn btn-secondary">Limpiar</button>
+      </div>
+      <table id="tabla-personajes" class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Especie</th>
+            <th>Género</th>
+            <th>Ubicación actual</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <!-- Busqueda por Episodios -->
+    <div class="mb-4">
+      <h3>Episodios</h3>
+      <div class="input-group mb-3">
+        <input type="text" id="input-busqueda-episodios" class="form-control" placeholder="Buscar por nombre">
+        <button id="boton-busqueda-episodios" class="btn btn-primary">Buscar</button>
+        <button id="boton-limpiar-episodios" class="btn btn-secondary">Limpiar</button>
+      </div>
+      <table id="tabla-episodios" class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>Fecha de emisión</th>
+            <th>Episodio</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <!-- Busqueda por Ubicaciones -->
+    <div>
+      <h3>Busqueda por Ubicaciones</h3>
+      <div class="input-group mb-3">
+        <input type="text" id="input-busqueda-ubicaciones" class="form-control" placeholder="Buscar por nombre">
+        <button id="boton-busqueda-ubicaciones" class="btn btn-primary">Buscar</button>
+        <button id="boton-limpiar-ubicaciones" class="btn btn-secondary">Limpiar</button>
+      </div>
+      <table id="tabla-ubicaciones" class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Dimensión</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -37,4 +37,22 @@ document.addEventListener("DOMContentLoaded", function() {
         limpiarTabla("tabla-ubicaciones");
     });
 
+
+    // Función para obtener personajes mediante la API
+    function obtenerPersonajes(terminoBusquedaPersonajes) {
+    // Construir la URL de la API con el término de búsqueda de personajes
+        var url = "https://rickandmortyapi.com/api/character/?name=" + terminoBusquedaPersonajes;
+    // Realizar una solicitud GET a la URL de la API
+        fetch(url)
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(data) {
+         // Llamar a la función mostrarPersonajes con los resultados obtenidos
+            mostrarPersonajes(data.results);
+          })
+          .catch(function(error) {
+            console.log("Error al obtener los personajes:", error);
+          });
+      }
 });

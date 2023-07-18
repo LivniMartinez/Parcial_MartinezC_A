@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
             let fila = "<tr><td colspan='5'>No se encontraron resultados.</td></tr>";
             tabla.innerHTML += fila;
             console.log("Tabla de personajes actualizada:", tabla.innerHTML);
+            // Mostrar una alerta en caso de que los datos sean incorrectos
+            alert("Los datos ingresados son incorrectos o no se encontraron personajes.");
         }
     }
 
@@ -129,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let fila = "<tr><td colspan='3'>No se encontraron resultados.</td></tr>";
             tabla.innerHTML += fila;
             console.log("Tabla de episodios actualizada:", tabla.innerHTML);
+            alert("Los datos ingresados son incorrectos");
         }
     }
 
@@ -173,6 +176,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let fila = "<tr><td colspan='3'>No se encontraron resultados.</td></tr>";
             tabla.innerHTML += fila;
             console.log("Tabla de ubicaciones actualizada:", tabla.innerHTML);
+            alert("Los datos ingresados son incorrectos");
         }
     }
     // Función para limpiar el contenido de una tabla

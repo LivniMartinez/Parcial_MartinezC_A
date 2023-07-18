@@ -78,4 +78,23 @@ document.addEventListener("DOMContentLoaded", function() {
           tabla.innerHTML += fila;
         }
       }
+    
+
+    // Función para obtener episodios mediante la API
+      function obtenerEpisodios(terminoBusquedaEpisodios) {
+    // Construir la URL de la API con el término de búsqueda de episodios
+        var url = "https://rickandmortyapi.com/api/episode/?name=" + terminoBusquedaEpisodios;
+    // Realizar una solicitud GET a la URL de la API
+        fetch(url)
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(data) {
+        // Llamar a la función mostrarEpisodios con los resultados obtenidos
+            mostrarEpisodios(data.results);
+          })
+          .catch(function(error) {
+            console.log("Error al obtener los episodios:", error);
+          });
+      }
 });

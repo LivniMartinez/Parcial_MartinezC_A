@@ -80,9 +80,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 fila += "</tr>";
                 tabla.innerHTML += fila;
             });
+            console.log("Tabla de personajes actualizada:", tabla.innerHTML);
         } else {
             let fila = "<tr><td colspan='5'>No se encontraron resultados.</td></tr>";
             tabla.innerHTML += fila;
+            console.log("Tabla de personajes actualizada:", tabla.innerHTML);
         }
     }
 

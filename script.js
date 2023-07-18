@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // Función para obtener personajes mediante la API
-    function obtenerPersonajes(terminoBusquedaPersonajes) {
+        function obtenerPersonajes(terminoBusquedaPersonajes) {
     // Construir la URL de la API con el término de búsqueda de personajes
         var url = "https://rickandmortyapi.com/api/character/?name=" + terminoBusquedaPersonajes;
     // Realizar una solicitud GET a la URL de la API
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
 
     // Función para mostrar los personajes en una tabla 
-      function mostrarPersonajes(personajes) {
+        function mostrarPersonajes(personajes) {
     // Obtener la tabla de personajes por su ID
         var tabla = document.getElementById("tabla-personajes").getElementsByTagName("tbody")[0];
         tabla.innerHTML = "";
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
 
     // Función para obtener episodios mediante la API
-      function obtenerEpisodios(terminoBusquedaEpisodios) {
+        function obtenerEpisodios(terminoBusquedaEpisodios) {
     // Construir la URL de la API con el término de búsqueda de episodios
         var url = "https://rickandmortyapi.com/api/episode/?name=" + terminoBusquedaEpisodios;
     // Realizar una solicitud GET a la URL de la API
@@ -97,4 +97,28 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Error al obtener los episodios:", error);
           });
       }
+
+    // Función para mostrar los episodios en una tabla
+        function mostrarEpisodios(episodios) {
+    // Obtener la tabla de episodios por su ID    
+            var tabla = document.getElementById("tabla-episodios").getElementsByTagName("tbody")[0];
+        tabla.innerHTML = "";
+    // Comprobacion si se encontraron episodios
+        if (episodios && episodios.length > 0) {
+          episodios.forEach(function(episodio) {
+            var fila = "<tr>";
+            fila += "<td>" + episodio.name + "</td>";
+            fila += "<td>" + episodio.air_date + "</td>";
+            fila += "<td>" + episodio.episode + "</td>";
+            fila += "</tr>";
+            tabla.innerHTML += fila;
+          });
+        //si no se encontraron los mismos  
+        } else {
+          var fila = "<tr><td colspan='3'>No se encontraron resultados.</td></tr>";
+          tabla.innerHTML += fila;
+        }
+      }
+
+
 });

@@ -139,4 +139,25 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     
 
+    // Función para mostrar las ubicaciones en la tabla
+      function mostrarUbicaciones(ubicaciones) {
+    // Obtener la tabla de ubicaciones por su ID
+        var tabla = document.getElementById("tabla-ubicaciones").getElementsByTagName("tbody")[0];
+        tabla.innerHTML = "";
+    // Comprobar si se encontraron ubicaciones
+        if (ubicaciones && ubicaciones.length > 0) {
+          ubicaciones.forEach(function(ubicacion) {
+            var fila = "<tr>";
+            fila += "<td>" + ubicacion.name + "</td>";
+            fila += "<td>" + ubicacion.type + "</td>";
+            fila += "<td>" + ubicacion.dimension + "</td>";
+            fila += "</tr>";
+            tabla.innerHTML += fila;
+          });
+        } else {
+          var fila = "<tr><td colspan='3'>No se encontraron resultados.</td></tr>";
+          tabla.innerHTML += fila;
+        }
+      }
+
 });

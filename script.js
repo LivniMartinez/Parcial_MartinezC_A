@@ -120,5 +120,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }
 
+    // Función para obtener ubicaciones mediante la API
+    function obtenerUbicaciones(terminoBusquedaUbicaciones) {
+    // Construir la URL de la API con el término de búsqueda de ubicaciones
+        var url = "https://rickandmortyapi.com/api/location/?name=" + terminoBusquedaUbicaciones;
+    // Realizar una solicitud GET a la URL de la API
+        fetch(url)
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(data) {
+            mostrarUbicaciones(data.results);
+          })
+        //si no se encontraron los mismos 
+          .catch(function(error) {
+            console.log("Error al obtener las ubicaciones:", error);
+          });
+      }
+    
 
 });

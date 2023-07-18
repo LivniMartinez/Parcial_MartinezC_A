@@ -10,6 +10,13 @@
     .title {
       text-align: center;
     }
+
+    .custom-title {
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
   </style>
 </head>
 <body>
@@ -24,7 +31,7 @@
         <button id="boton-limpiar-personajes" class="btn btn-success">Limpiar</button>
       </div>
       <table id="tabla-personajes" class="table table-bordered">
-        <thead class="table-dark">
+        <thead class="table-warning">
           <tr>
             <th>Imagen</th>
             <th>Nombre</th>
@@ -38,14 +45,14 @@
     </div>
     <!-- Busqueda por Episodios -->
     <div class="mb-4">
-      <h3>Episodios</h3>
+      <h3>Busqueda de Episodios</h3>
       <div class="input-group mb-3">
         <input type="text" id="input-busqueda-episodios" class="form-control" placeholder="Buscar por id">
         <button id="boton-busqueda-episodios" class="btn btn-primary">Buscar</button>
         <button id="boton-limpiar-episodios" class="btn btn-success">Limpiar</button>
       </div>
       <table id="tabla-episodios" class="table table-bordered">
-        <thead class="table-dark">
+        <thead class="table-warning">
           <tr>
             <th>Nombre</th>
             <th>Fecha de emisión</th>
@@ -64,7 +71,7 @@
         <button id="boton-limpiar-ubicaciones" class="btn btn-success">Limpiar</button>
       </div>
       <table id="tabla-ubicaciones" class="table table-bordered">
-        <thead class="table-dark">
+        <thead class="table-warning">
           <tr>
             <th>Nombre</th>
             <th>Tipo</th>
